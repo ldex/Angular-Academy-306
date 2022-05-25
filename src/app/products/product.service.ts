@@ -20,6 +20,11 @@ export class ProductService {
     this.initMostExpensiveProduct();
   }
 
+  resetList() {
+    this.productsSubject.next([]);
+    this.initProducts();
+  }
+
   private initMostExpensiveProduct() {
     this.mostExpensiveProduct$ =
       this
