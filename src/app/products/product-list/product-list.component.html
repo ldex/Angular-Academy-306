@@ -54,7 +54,7 @@
         Next Page >
     </button>
 
-    <button (click)="loadMore()" *ngIf="(productsNumber$ | async) <= end">
+    <button (click)="loadMore()" *ngIf="(productsNumber$ | async) <= end && !(isLastPage$ | async)">
         Load {{productsToLoad}} more...
     </button>
 </div>
